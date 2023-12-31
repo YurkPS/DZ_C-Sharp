@@ -25,11 +25,30 @@ class Program
             }
         }
 
+        string[] NewArray = new string[countIskomStr];
+        int index = 0;
+
+        foreach (var str in Array)
+        {
+            if (str.Length <= IskomStrLength)
+            {
+                NewArray[index] = str;
+                index++;
+            }
+        }
+
         Console.Clear();
         Console.WriteLine("Первоначальный массив:");
         foreach (var str in Array)
         {
             Console.WriteLine(str);
+        }
+        
+        Console.WriteLine("\nСледующие элементы массива имеют длину <= 3:");
+        foreach (var str in NewArray)
+        {
+            Console.Write($"{str}" + " ");
+            //Console.Write(", ");
         }
     }
 }
