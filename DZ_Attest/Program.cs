@@ -13,6 +13,17 @@ class Program
         {
             Array[i] = Console.ReadLine();
         }
+        
+        int IskomStrLength = 3;
+
+        int countIskomStr = 0;
+        foreach (var str in Array)
+        {
+            if (str.Length <= IskomStrLength)
+            {
+                countIskomStr++;
+            }
+        }
 
         Console.Clear();
         Console.WriteLine("Первоначальный массив:");
